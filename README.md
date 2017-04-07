@@ -1,6 +1,6 @@
 ![regrets logo](https://github.com/timseo/GA_project2/blob/master/wireframe/regrets-logo-black.png?raw=true)
 
-
+#Brewsker
 
 
 The goal is to provide a platform for beer lovers to showcase how much they love their beers through **Collabortive Interactive Art**.  Creating an opportunity for beer or spirits vendors to come in and **measure customer engagement** against the competition.  **Brewsker** aims to be the place where vendors and customers can interact in a fun, meaningful and measurable way.  **Brewkers** will be able to see how many times they placed a sticker and keep track in their profile.
@@ -35,8 +35,11 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 
 ## Links
+
 ###[Brewsker - github](https://github.com/timseo/ga_p4 "Brewsker")
+
 ###[Trello](https://trello.com/b/L3ycktGF/p4 "trello")
+
 ###Heroku link here
 
 ![moski logo](https://github.com/timseo/GA_project1/blob/master/images/moski-greyscale-logo.png?raw=true=10x10)
