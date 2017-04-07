@@ -76,5 +76,7 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 ## Model
 
+![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
+
 ![erd 1](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%207%2005%2025%20PM.jpg?raw=true)
 
