@@ -1,4 +1,4 @@
-![regrets logo](https://github.com/timseo/GA_project2/blob/master/wireframe/regrets-logo-black.png?raw=true)
+![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 #Brewsker
 
@@ -44,24 +44,27 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 ![moski logo](https://github.com/timseo/GA_project1/blob/master/images/moski-greyscale-logo.png?raw=true=10x10)
 
-## Wireframe
+# Wireframe
 
 
-Sign up / Login 
+##Sign up / Login 
+![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 1](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2044%2036%20PM.jpg?raw=true)
 
-User Profile 
+##User Profile 
+![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 2](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2047%2056%20PM.jpg?raw=true)
 
 
-Brewsker Main
+##Brewsker Main
+![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 3](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2051%2047%20PM.jpg?raw=true)
 
 
-ScoreBoard
+##ScoreBoard
 
 ![wireframe 4](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2054%2052%20PM.jpg?raw=true)
 
