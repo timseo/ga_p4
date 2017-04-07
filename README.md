@@ -36,7 +36,6 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 ## Links
 
-### [Brewsker - github](https://github.com/timseo/ga_p4 "Brewsker")
 
 ### [Trello](https://trello.com/b/L3ycktGF/p4 "trello")
 
