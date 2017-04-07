@@ -47,24 +47,29 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 # Wireframe
 
 
-## Sign up / Login 
+## Sign up / Login
+
 ![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 1](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2044%2036%20PM.jpg?raw=true)
 
 ## User Profile 
+
 ![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 2](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2047%2056%20PM.jpg?raw=true)
 
 
 ## Brewsker Main
+
 ![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 3](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2051%2047%20PM.jpg?raw=true)
 
 
 ## ScoreBoard
+
+![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![wireframe 4](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2054%2052%20PM.jpg?raw=true)
 
