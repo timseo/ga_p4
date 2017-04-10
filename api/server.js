@@ -1,14 +1,17 @@
 var express      = require('express'),
   	app          = express(),
+    cors         = require('cors')
   	logger       = require('morgan'),
   	bodyParser	 = require('body-parser'),
   	mongoose     = require('mongoose'),
   	port         = process.env.PORT || 3000,
-  	drinkRoutes  = require('./config/drink_routes.js'),
-    userRoutes   = require('./config/user_routes.js')
+    routes   = require('./config/routes.js'),
 
+require('dotenv').config();
 //establish connection to mongo database
 mongoose.connect('mongodb://localhost/brewskerdb')
+
+app.use(cors())
 
 //log requests made to the app
 app.use(logger('dev'))
@@ -17,12 +20,15 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-//mount beanRoutes at /api/beans
-app.use('/api/drinks', drinkRoutes)
-// mounts userRoutes at /api/users
-app.use('/api/users', userRoutes)
+app.use(validateContentType)
 
-require('dotenv').config();
+//mount beanRoutes at /api/beans
+app.use(routes)
+// mounts userRoutes at /api/users
+// app.use('/api/users', routes)
+
+app.use(addFailedAuthHeader)
+
 
 //run the web server
 app.listen(port, function(){

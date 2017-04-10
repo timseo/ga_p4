@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    Drink = require('./drink.js')
+    Drink = require('./drink.js');
 
 var userSchema = new mongoose.Schema({
       email: String,
@@ -9,9 +9,9 @@ var userSchema = new mongoose.Schema({
         ref: 'Drink',
         userCounter: Number
       }]
-    })
+    });
 
 
-var User = mongoose.model('User', userSchema)
+var User = mongoose.model('User', userSchema);
 
 module.exports = User
