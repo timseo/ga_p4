@@ -1,11 +1,11 @@
-var express   = require('express'),
-  	app         = express(),
-  	logger      = require('morgan'),
-  	bodyParser	= require('body-parser'),
-  	mongoose    = require('mongoose'),
-  	port        = process.env.PORT || 3000,
+var express      = require('express'),
+  	app          = express(),
+  	logger       = require('morgan'),
+  	bodyParser	 = require('body-parser'),
+  	mongoose     = require('mongoose'),
+  	port         = process.env.PORT || 3000,
   	drinkRoutes  = require('./config/drink_routes.js'),
-    userRoutes = require('./config/user_routes.js')
+    userRoutes   = require('./config/user_routes.js')
 
 //establish connection to mongo database
 mongoose.connect('mongodb://localhost/brewskerdb')
