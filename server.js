@@ -5,7 +5,8 @@ var express      = require('express'),
   	bodyParser	 = require('body-parser'),
   	mongoose     = require('mongoose'),
   	port         = process.env.PORT || 3000,
-    routes       = require('./config/routes.js')
+    routes       = require('./config/routes.js'),
+    io           = require('socket.io')()
 
 require('dotenv').config();
 //establish connection to mongo database
