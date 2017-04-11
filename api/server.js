@@ -5,11 +5,12 @@ var express      = require('express'),
   	bodyParser	 = require('body-parser'),
   	mongoose     = require('mongoose'),
   	port         = process.env.PORT || 3000,
-    routes       = require('./config/routes.js'),
+    routes       = require('./config/routes.js')
 
 require('dotenv').config();
 //establish connection to mongo database
-mongoose.connect('mongodb://localhost/brewskerdb')
+var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/brewskerdb'
+mongoose.connect(dbUri)
 
 app.use(cors())
 
