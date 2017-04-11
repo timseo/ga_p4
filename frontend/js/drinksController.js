@@ -22,7 +22,7 @@ function DrinksController($http){
 
   function destroyDrinks(drinks){
     $http
-      .delete("http://localhost:3000/drinks/" + drinks._id)
+      .delete("http://localhost:3000/drinks/" + drink._id)
       .then(function(response){
         var index = self.all.indexOf(drinks);
         self.all.splice(index, 1);

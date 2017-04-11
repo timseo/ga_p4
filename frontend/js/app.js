@@ -13,9 +13,9 @@ function DrinkRouter($stateProvider, $urlRouterProvider){
     controller: 'DrinksController',
     controllerAs: 'listVm'
   })
-  .state('new', {
+  .state('newdrink', {
     url: '/new',
-    templateUrl: 'new.html',
+    templateUrl: 'newdrink.html',
     controller: 'DrinksNewController',
     controllerAs: 'newVm'
   })
