@@ -11,10 +11,13 @@ router.route('/users')
       .get(usersController.index)
       .post(usersController.create)
 
+router.route('/users/token')
+      .post(token.create)
+
 router.route('/users/:id')
-      .get(usersController.show)
-      .patch(usersController.update)
-      .delete(usersController.destroy)
+      .get(token.authenticate, usersController.show)
+      .patch(token.authenticate, usersController.update)
+      .delete(token.authenticate, usersController.destroy)
 
 // api/drinks/ routes
 router.route('/drinks')

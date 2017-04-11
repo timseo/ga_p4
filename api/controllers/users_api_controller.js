@@ -8,13 +8,30 @@ function index(req, res){
 }
 
 
-function create(req, res, next){
-  var user = new User(req.body)
-  user.save(function(err, user){
-    if(err) res.status(500).send(err)
-    res.status(201).send(user)
-  })
-}
+function create(req, res, next) {
+  if (!req.body.password) {
+    return res.status(422).send('Missing required fields');
+  }
+  User
+    .create(req.body)
+    .then(function(user) {
+      res.json({
+        success: true,
+        message: 'Successfully created user.',
+        data: {
+          email: user.email,
+          id:    user._id
+        }
+      });
+    }).catch(function(err) {
+      if (err.message.match(/E11000/)) {
+        err.status = 409;
+      } else {
+        err.status = 422;
+      }
+      next(err);
+    });
+};
 
 
 function show(req, res){
