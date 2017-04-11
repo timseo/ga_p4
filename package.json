@@ -1,10 +1,7 @@
 {
-  "name": "api",
+  "name": "brewskerp",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-      "node": "6.9.4"
-    },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +16,7 @@
     "express": "^4.15.2",
     "jsonwebtoken": "^7.3.0",
     "method-override": "^2.3.8",
-    "mongoose": "^4.9.4",
+    "mongoose": "^4.9.2",
     "mongoose-bcrypt": "^1.4.2",
     "morgan": "^1.8.1",
     "socket.io": "^1.7.3"

@@ -1,0 +1,7 @@
+<h1>Listing all Beans:</h1>
+<ul id="beans">
+  <li ng-repeat="bean in beansCtrl.all" data-id="{{bean._id}}">
+    <strong>{{bean.name}}</strong> | {{bean.quantity}} lbs in stock
+    <button ng-click="beansCtrl.deleteBean(bean)">X</button>
+  </li>
+</ul>

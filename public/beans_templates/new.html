@@ -1,0 +1,14 @@
+<h1>Add New Bean</h1>
+<form ng-submit="beansCtrl.addBean()" id="newBean">
+  <div>
+    <label for="newBean-name">Name:</label>
+    <input type="text" id="newBean-name" ng-model="beansCtrl.newBean.name" placeholder="irKat's blue ocean roast">
+  </div>
+  <div>
+    <label for="newBean-quantity">Quantity:</label>
+    <input type="text" id="newBean-quantity" ng-model="beansCtrl.newBean.quantity" placeholder="Quantity in lbs">
+  </div>
+  <div>
+    <input type="submit" value="Add Bean">
+  </div>
+</form>
