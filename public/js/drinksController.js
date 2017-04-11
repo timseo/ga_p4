@@ -14,7 +14,7 @@ function DrinksController($http){
   getDrinks();
   function getDrinks(){
     $http
-      .get('http://localhost:3000/drinks')
+      .get('https://localhost:3000/drinks')
       .then(function(response){
         self.all = response.data.drinks;
     });
@@ -22,7 +22,7 @@ function DrinksController($http){
 
   function destroyDrinks(drinks){
     $http
-      .delete("http://localhost:3000/drinks/" + drink._id)
+      .delete("https://localhost:3000/drinks/" + drink._id)
       .then(function(response){
         var index = self.all.indexOf(drinks);
         self.all.splice(index, 1);
@@ -37,7 +37,7 @@ function DrinksNewController($http, $state){
 
   function addDrink(){
     $http
-      .post('http://localhost:3000/drinks', self.newDrink)
+      .post('https://localhost:3000/drinks', self.newDrink)
       .then(function(response){
         $state.go('index')
     });
