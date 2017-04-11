@@ -1,4 +1,5 @@
 var express      = require('express'),
+    path         = require('path'),
   	app          = express(),
     cors         = require('cors')
   	logger       = require('morgan'),
@@ -16,6 +17,7 @@ app.use(cors())
 
 //log requests made to the app
 app.use(logger('dev'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 //make json objects available in requests
 app.use(bodyParser.json())
