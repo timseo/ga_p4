@@ -21,13 +21,13 @@ router.route('/users/:id')
 
 // api/drinks/ routes
 router.route('/drinks')
-      .get(drinksController.index)
-      .post(drinksController.create)
+      .get(drinksController.getDrinks)
+      .post(drinksController.createDrinks)
 
 // api/drinks/:id routes
 router.route('/drinks/:id')
-      .get(drinksController.show)
-      .patch(drinksController.update)
-      .delete(drinksController.destroy)
+      .get(drinksController.showDrinks)
+      .patch(drinksController.updateDrinks)
+      .delete(drinksController.destroyDrinks)
 
 module.exports = router
