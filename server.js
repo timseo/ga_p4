@@ -6,7 +6,7 @@ var express      = require('express'),
   	bodyParser	 = require('body-parser'),
   	mongoose     = require('mongoose'),
   	// port         = process.env.PORT || 3000,
-    routes       = require('./config/routes.js')
+    routes       = require('./config/routes.js'),
 
 require('dotenv').config();
 //establish connection to mongo database
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(validateContentType)
 
 //mount beanRoutes at /api/beans
-app.use('/', routes)
+app.use(routes)
 // mounts userRoutes at /api/users
 // app.use('/api/users', routes)
 
