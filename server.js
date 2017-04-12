@@ -5,7 +5,7 @@ var express      = require('express'),
   	logger       = require('morgan'),
   	bodyParser	 = require('body-parser'),
   	mongoose     = require('mongoose'),
-  	port         = process.env.PORT || 3000,
+  	// port         = process.env.PORT || 3000,
     routes       = require('./config/routes.js')
 
 require('dotenv').config();
@@ -34,9 +34,9 @@ app.use(addFailedAuthHeader)
 
 
 //run the web server
-app.listen(port, function(){
-	console.log('Andre', port)
-})
+// app.listen(port, function(){
+// 	console.log('Andre', port)
+// })
 
 module.exports = app
 

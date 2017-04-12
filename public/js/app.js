@@ -9,7 +9,7 @@ function DrinkRouter($stateProvider, $urlRouterProvider){
   $stateProvider
   .state('index', {
     url: '/',
-    templateUrl: 'list.html',
+    templateUrl: 'index.html',
     controller: 'DrinksController',
     controllerAs: 'listVm'
   })

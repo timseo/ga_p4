@@ -32,16 +32,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   })
 
-  while (initials.length < 2 || initials.length > 8) {
-    initials = prompt("Please enter your initials").toUpperCase()
-  }
+  // while (initials.length < 2 || initials.length > 8) {
+  //   initials = prompt("Please enter your initials").toUpperCase()
+  // }
 // changed addcircle parametter x y rgba etc to 'data'
   function addCircle(data) {
     var el = document.createElement('div')
     el.style.left = data.x - Math.floor(data.dia / 2 + 0.5) + 'px'
     el.style.top = data.y - Math.floor(data.dia / 2 + 0.5) + 'px'
     el.style.width = el.style.height = data.dia + 'px'
-    el.style.backgroundColor = data.rgba
+    // el.style.backgroundColor = data.rgba
+    el.style.border = 'solid 3px grey'
     el.style.fontSize = Math.floor(data.dia / 3) + 'px'
     el.style.color = data.rgbatext // or use data.rgba to pull in random
     el.style.textAlign = 'left'

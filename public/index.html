@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Brewsker</title>
@@ -13,6 +14,7 @@
   <script src="js/navbar.controller.js"></script>
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
+
 <body ng-app='Brewsker'>
   <header ng-controller="NavbarController as vm">
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -28,28 +30,22 @@
     </nav>
   </header>
 
-  <h1>Brewsker</h1>
-  <nav>
 
-  </nav>
-  <section ui-view>
-  </section>
+  <h1>Brewsker in index page</h1>
+
+  <section ui-view></section>
 
 
+    <section id="circles"></section>
+    <footer><ul id="players"></ul></footer>
 
-  <section id="circles"></section>
-  <footer><ul id="players"></ul></footer>
+<!-- ////////////////////// socket.io scripts begin   ////////////////////// -->
 
-  <!-- ////////////////////// socket.io scripts begin   ////////////////////// -->
+  <!-- socket.io needs to load before app.js -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/javascripts/app.js"></script>
 
-      <section id="circles"></section>
-      <footer><ul id="players"></ul></footer>
-      <!-- socket.io needs to load before app.js -->
-      <script src="/socket.io/socket.io.js"></script>
-      <script src="/javascripts/app.js"></script>
-
-  <!-- ////////////////////// socket.io scripts end    ////////////////////// -->
-
+<!-- ////////////////////// socket.io scripts end    ////////////////////// -->
   <script src="js/config/app.debug.js"></script>
   <script src="js/config/app.httpInterceptors.js"></script>
   <script src="js/config/authErrorRedirect.service.js"></script>
@@ -58,5 +54,6 @@
   <script src="js/auth/auth.service.js"></script>
   <script src="js/auth/token.service.js"></script>
   <script src="js/auth/user.service.js"></script>
+
 </body>
 </html>
