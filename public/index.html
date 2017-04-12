@@ -18,9 +18,9 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <a ui-sref="index" class="navbar-brand">Home</a>
+        <button type="button" class="btn btn-default navbar-btn navbar-right">clear</button>
         <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
         <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
-        <span>realtime-circles</span><button>clear</button>
       </div>
       <a ui-sref="index">All Drinks</a>
       <a ui-sref="newdrink">New Drink</a>

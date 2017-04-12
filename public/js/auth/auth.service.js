@@ -24,7 +24,7 @@
     function logIn(data) {
       var promise = $http({
         method: 'POST',
-        url:    'https://localhost:3000/users/token',
+        url:    'https://localhost:8080/users/token',
         data:   data
       })
       .then(
