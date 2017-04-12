@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app='Brewsker'>
 
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
-<body ng-app='Brewsker'>
+<body ng-controller="DrinksController as drinkCtrl" ng-controller="DrinksNewController as drinknewCtrl">
   <header ng-controller="NavbarController as vm">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">

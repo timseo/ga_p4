@@ -1,1 +1,14 @@
-<h1>New Drink page</h1>
+<h1>Add a Drink</h1>
+<form ng-submit="drinknewCtrl.addDrink()" id="newDrink">
+  <div>
+    <label for="newDrink-name">Name:</label>
+    <input type="text" id="newDrink-name" ng-model="drinknewCtrl.newDrink.name" placeholder="Boom boom juice">
+  </div>
+  <div>
+    <label for="newDrink-quantity">Quantity:</label>
+    <input type="text" id="newDrink-quantity" ng-model="drinknewCtrl.newDrink.quantity" placeholder="Quantity in lbs">
+  </div>
+  <div>
+    <input type="submit" value="Add Drink">
+  </div>
+</form>

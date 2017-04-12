@@ -1,1 +1,8 @@
 <h1>About Brewskersss</h1>
+<h1>Choose your Brewsker:</h1>
+<ul id="drink">
+  <li ng-repeat="drinks in drinkCtrl.all" data-id="{{drinks._id}}">
+    <strong>{{drinks.name}}</strong> | {{drink.quantity}}
+    <button ng-click="drinkCtrl.deleteDrink(drink)">X</button>
+  </li>
+</ul>
