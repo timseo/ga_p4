@@ -10,8 +10,7 @@ var express      = require('express'),
 
 require('dotenv').config();
 //establish connection to mongo database
-var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/brewskerdb'
-mongoose.connect(dbUri)
+
 
 app.use(cors())
 

@@ -15,6 +15,11 @@ var http = require('http')
 var port = normalizePort(process.env.PORT || '8080')
 app.set('port', port)
 
+var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/brewskerdb'
+mongoose.connect(dbUri)
+
+
+
 /**
  * Create HTTP server.
  */
