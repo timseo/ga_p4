@@ -24,6 +24,7 @@ function create(req, res, next) {
         }
       });
     }).catch(function(err) {
+      console.log("Problem logging in :( boo...")
       if (err.message.match(/E11000/)) {
         err.status = 409;
       } else {

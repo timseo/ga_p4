@@ -22,15 +22,17 @@
     }
 
     function logIn(data) {
+      console.log('About to send post request to token auth route...')
       var promise = $http({
         method: 'POST',
-        url:    'https://localhost:8080/users/token',
+        url:    '/users/token',
         data:   data
       })
       .then(
         // if the request succeeded, then run this
         // handler, and pass on the decoded token.
         function(res) {
+          console.log("Received response, token is:", res.data);
           token.store(res.data);
           return token.decode();
         }

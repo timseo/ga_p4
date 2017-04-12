@@ -1,6 +1,6 @@
 var jwt = require('jsonwebtoken');
-
 var User = require('../models/user.js');
+require('dotenv').config();
 
  module.exports = {
    create:       create,
@@ -41,6 +41,7 @@ var User = require('../models/user.js');
   *     - The response body contains the token that was generated.
   */
  function create(req, res, next) {
+   console.log("Checking credentials for existing user...")
    if (!req.body.email || !req.body.password) {
      var message = 'Missing required fields: email and password';
      return res.status(422).json(message);
@@ -48,9 +49,12 @@ var User = require('../models/user.js');
    User
      .findOne({email: req.body.email}).exec()
      .then(function(user) {
+       console.log("About to verify login credentials...")
        if (!user || !user.verifyPasswordSync(req.body.password)) {
+         console.log("Someone tried to unsuccessfully log in...")
+         console.log(req.body)
          var message = 'User not found or password incorrect.';
-         return res.status(403).json(message);
+         return res.status(403).json({message});
        }
 
        var token = generateJwt(user);
@@ -99,6 +103,8 @@ var User = require('../models/user.js');
  // ****************************** HELPERS ******************************
 
  function generateJwt(user, options) {
+   console.log("about to sign token using token secret...")
+   console.log(process.env.TOKEN_SECRET)
    return jwt.sign(
      extractPayload(user, options),
      process.env.TOKEN_SECRET,

@@ -19,8 +19,8 @@
     };
     vm.submitSignUp = submitSignUp;
     vm.logIn = {
-      email:    "pj@ga.co",
-      password: "12345"
+      email:    "boom2@gmail.com",
+      password: "password123"
     };
     vm.submitLogIn = submitLogIn;
     vm.conflict = false;
@@ -47,6 +47,7 @@
     }
 
     function submitLogIn() {
+      console.log("About to send login request...")
       authService
         .logIn(vm.logIn)
         .then(
@@ -57,6 +58,8 @@
           },
           // on error
           function(err) {
+            console.log("Uhoh, problem getting token...");
+            console.log(err)
             $log.info('Error:', err);
           }
         );

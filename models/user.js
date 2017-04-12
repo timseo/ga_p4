@@ -11,6 +11,7 @@ var userSchema = new mongoose.Schema({
       }]
     });
 
+userSchema.plugin(require('mongoose-bcrypt'));
 
 var User = mongoose.model('User', userSchema);
 
