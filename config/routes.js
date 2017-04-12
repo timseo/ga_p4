@@ -4,7 +4,8 @@ var express = require('express'),
     methodOverride = require('method-override'),
     drinksController = require('../controllers/drinks_api_controller.js'),
     usersController = require('../controllers/users_api_controller.js'),
-    token = require('./token_auth');
+    token = require('./token_auth')
+
 
 
 router.route('/users')

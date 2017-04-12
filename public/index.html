@@ -20,25 +20,33 @@
         <a ui-sref="index" class="navbar-brand">Home</a>
         <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
         <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+        <span>realtime-circles</span><button>clear</button>
       </div>
+      <a ui-sref="index">All Drinks</a>
+      <a ui-sref="newdrink">New Drink</a>
+      <a ui-sref="about">About</a>
     </nav>
   </header>
 
   <h1>Brewsker</h1>
   <nav>
-    <a ui-sref="index">All Drinks</a>
-    <a ui-sref="newdrink">New Drink</a>
-    <a ui-sref="about">About</a>
-  </nav>
 
-  <section ui-view></section>
+  </nav>
+  <section ui-view>
+  </section>
+
+
+
+  <section id="circles"></section>
+  <footer><ul id="players"></ul></footer>
+
   <!-- ////////////////////// socket.io scripts begin   ////////////////////// -->
-      <header><span>realtime-circles</span><button>clear</button></header>
+
       <section id="circles"></section>
       <footer><ul id="players"></ul></footer>
       <!-- socket.io needs to load before app.js -->
-      <script src="socket.io/socket.io.js"></script>
-      <script src="javascripts/app.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/javascripts/app.js"></script>
 
   <!-- ////////////////////// socket.io scripts end    ////////////////////// -->
 
