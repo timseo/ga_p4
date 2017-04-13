@@ -25,13 +25,16 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 
 ## Stretch Goals
-* Let users create their own drink boards
-* Create a separate interface for beverage vendors 
+* Persist data received from socket.io
+* Create a separate interface for beverage vendors
 * User can upload their own images
-* Diplay metrics on graph 
+* Diplay metrics on graph
 
 ## Unsolved
-* TBA
+* Stickers on all pages
+* Image instead of 'circles'
+* Facebook OAuth
+
 
 
 ## Links
@@ -39,7 +42,7 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 ### [Trello](https://trello.com/b/L3ycktGF/p4 "trello")
 
-### Heroku link here
+### [Heroku](https://brewsker.herokuapp.com "heroku")
 
 ![moski logo](https://github.com/timseo/GA_project1/blob/master/images/moski-greyscale-logo.png?raw=true=10x10)
 
@@ -52,7 +55,7 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 
 ![wireframe 1](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%206%2044%2036%20PM.jpg?raw=true)
 
-## User Profile 
+## User Profile
 
 ![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
@@ -78,4 +81,3 @@ Started by sketching out wireframes.  ERD to visualize data flow and table manag
 ![brewsker logo](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true)
 
 ![erd 1](https://github.com/timseo/ga_p4/blob/master/wireframe_erd/Photo%20Apr%2006,%207%2005%2025%20PM.jpg?raw=true)
-

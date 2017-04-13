@@ -16,28 +16,45 @@
 </head>
 
 <body ng-controller="DrinksController as drinkCtrl" ng-controller="DrinksNewController as drinknewCtrl">
+
   <header ng-controller="NavbarController as vm">
+
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <a ui-sref="index" class="navbar-brand">Home</a>
-        <button type="button" class="btn btn-default navbar-btn navbar-right">clear</button>
-        <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
-        <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+        <div class="container">
+          <a ui-sref="index" class="navbar-brand">
+              <img alt="Brand" src="https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true" height= 160%>
+          </a>
+          <!-- Single button -->
+                <button type="button" class="btn btn-default navbar-btn navbar-right">Clear</button>
+                <button type="button" class="btn btn-default dropdown-toggle navbar-btn navbar-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action <span class="caret"></span>
+                </button>
+                  <ul class="dropdown-menu">
+                  <li><a ui-sref="#">Action</a></li>
+                  <li><a ui-sref="#">Another action</a></li>
+                  <li><a ui-sref="#">Something else here</a></li>
+                  <li><a ui-sref="#">Separated link</a></li>
+                  </ul>
+
+              <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+              <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+          <a ui-sref="index">All Drinks</a>
+          <a ui-sref="newdrink">New Drink</a>
+          <a ui-sref="about">About</a>
       </div>
-      <a ui-sref="index">All Drinks</a>
-      <a ui-sref="newdrink">New Drink</a>
-      <a ui-sref="about">About</a>
     </nav>
+
   </header>
 
 
-  <h1>Brewsker in index page</h1>
 
-  <section ui-view></section>
+          <h1>Brewsker in index page</h1>
+
+              <section ui-view></section>
 
 
-    <section id="circles"></section>
-    <footer><ul id="players"></ul></footer>
+              <section id="circles"></section>
+              <footer><ul id="players"></ul></footer>
 
 <!-- ////////////////////// socket.io scripts begin   ////////////////////// -->
 
