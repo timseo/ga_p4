@@ -5,8 +5,8 @@
     <input type="text" id="newDrink-name" ng-model="drinknewCtrl.newDrink.drinkName" placeholder="Boom boom juice">
   </div>
   <div>
-    <label for="newDrink-quantity">Quantity:</label>
-    <input type="text" id="newDrink-quantity" ng-model="drinknewCtrl.newDrink.drinkQuantity" placeholder="Quantity in lbs">
+    <label for="newDrink-image">Logo:</label>
+    <input type="text" id="newDrink-image" ng-model="drinknewCtrl.newDrink.drinkImage">
   </div>
   <div>
     <input type="submit" value="Add Drink">
@@ -16,9 +16,9 @@
 <!-- Single button -->
 
   <ul class="dropdown-menu">
-    <li><a ui-sref="#">Action</a></li>
-    <li><a ui-sref="#">Another action</a></li>
-    <li><a ui-sref="#">Something else here</a></li>
+    <li><a ui-sref-active="active" ui-sref="#">Action</a></li>
+    <li><a ui-sref-active="active" ui-sref="#">Another action</a></li>
+    <li><a ui-sref-active="active" ui-sref="#">Something else here</a></li>
     <li role="separator" class="divider"></li>
     <li><a ui-sref="#">Separated link</a></li>
   </ul>
@@ -27,7 +27,7 @@
 
   <ul id="drinks">
     <li ng-repeat="drink in drinkCtrl.all" data-id="{{drinks._id}}">
-      <strong>{{drink.drinkName}}</strong> | {{drink.drinkQuantity}} lbs in stock
-      <button ng-click="drinkCtrl.deleteDrink(drink)">DELETE</button>
+      <strong>{{drink.drinkName}}</strong> | {{drink.drinkImage}}
+      <button ng-click="drinkCtrl.destroyDrinks(drink)">DELETE</button>
     </li>
   </ul>

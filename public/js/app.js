@@ -24,9 +24,9 @@ function DrinkRouter($stateProvider, $urlRouterProvider){
     templateUrl: 'about.html'
   })
   .state('signin', {
-  url: '/signin',
-  templateUrl: 'signin.html',
-  controller: 'SignInController',
-  controllerAs: 'vm'
-});
+    url: '/signin',
+    templateUrl: 'signin.html',
+    controller: 'SignInController',
+    controllerAs: 'vm'
+  });
 }

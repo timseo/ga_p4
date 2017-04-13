@@ -24,7 +24,7 @@ function DrinksController($http){
     $http
       .delete("/drinks/" + drink._id)
       .then(function(response){
-        var index = self.all.indexOf(drinks);
+        var index = self.all.indexOf(drink);
         self.all.splice(index, 1);
       });
   }
@@ -39,7 +39,8 @@ function DrinksNewController($http, $state){
     $http
       .post('/drinks', self.newDrink)
       .then(function(response){
-        $state.go('index')
+        $state.go('newdrink')
+        getDrinks()
     });
     self.newDrink = {};
   }
