@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     el.style.top = data.y - Math.floor(data.dia / 2 + 0.5) + 'px'
     el.style.width = el.style.height = data.dia + 'px'
     // el.style.backgroundColor = data.rgba
-    el.style.border = 'solid 3px grey'
+    el.style.border = data.rgba + 'solid 3px'
     el.style.fontSize = Math.floor(data.dia / 3) + 'px'
     el.style.color = data.rgbatext // or use data.rgba to pull in random
     el.style.textAlign = 'left'

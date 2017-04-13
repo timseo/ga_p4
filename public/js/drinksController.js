@@ -39,9 +39,9 @@ function DrinksNewController($http, $state){
     $http
       .post('/drinks', self.newDrink)
       .then(function(response){
-        $state.go('newdrink')
         getDrinks()
-    });
-    self.newDrink = {};
+        $state.go('newdrink')
+    })
+    self.newDrink = {}
   }
 }
