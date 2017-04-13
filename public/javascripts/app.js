@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     el.style.color = data.rgbatext // or use data.rgba to pull in random
     el.style.textAlign = 'left'
     el.style.lineHeight = data.dia + 'px'
-    el.innerHTML = data.initials
+    el.innerHTML = '<img ng-src="http://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" alt="logo">'
     circles.appendChild(el)
   }
 

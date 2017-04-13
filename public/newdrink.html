@@ -1,17 +1,24 @@
 <h1>Add a Drink</h1>
-<form ng-submit="drinknewCtrl.addDrink()" id="newDrink">
-  <div>
-    <label for="newDrink-name">Name:</label>
-    <input type="text" id="newDrink-name" ng-model="drinknewCtrl.newDrink.drinkName" placeholder="Boom boom juice">
-  </div>
-  <div>
-    <label for="newDrink-image">Logo:</label>
-    <input type="text" id="newDrink-image" ng-model="drinknewCtrl.newDrink.drinkImage">
-  </div>
-  <div>
-    <input type="submit" value="Add Drink">
-  </div>
-</form>
+
+
+  <!-- <div ng-show="self.authService.isLoggedIn()"> -->
+
+      <form ng-submit="drinknewCtrl.addDrink()" id="newDrink">
+        <div>
+          <label for="newDrink-name">Name:</label>
+          <input type="text" id="newDrink-name" ng-model="drinknewCtrl.newDrink.drinkName" placeholder="Boom boom juice">
+        </div>
+        <div>
+          <label for="newDrink-image">Logo:</label>
+          <input type="text" id="newDrink-image" ng-model="drinknewCtrl.newDrink.drinkImage">
+        </div>
+        <div>
+          <input type="submit" value="Add Drink">
+        </div>
+      </form>
+
+  <!-- </div> -->
+
 
   <hr>
 
@@ -23,7 +30,9 @@
           <strong>{{drink.drinkName}}</strong>
         <br>
         <br>
+
           <button ng-click="drinknewCtrl.destroyDrinks(drink)" margin-top="20px">DELETE</button>
+
         <hr>
       </li>
 

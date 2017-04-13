@@ -1,5 +1,5 @@
 angular
-  .module('Brewsker', ['ui.router'])
+  .module('Brewsker', ['ui.router', 'ui.bootstrap'])
   .config(DrinkRouter);
 
 function DrinkRouter($stateProvider, $urlRouterProvider){

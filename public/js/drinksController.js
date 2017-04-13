@@ -2,11 +2,12 @@ angular.module('Brewsker')
   .controller('DrinksController', DrinksController)
   .controller('DrinksNewController', DrinksNewController);
 
-DrinksController.$inject = ['$http'];
-DrinksNewController.$inject = ['$http', '$state'];
+DrinksController.$inject = ['$http', 'authService'];
+DrinksNewController.$inject = ['$http', '$state', 'authService'];
 
-function DrinksController($http){
+function DrinksController($http, authService){
   var self = this;
+  self.authService = authService;
   self.all = [];
   self.getDrinks = getDrinks;
   // self.destroyDrinks = destroyDrinks;
@@ -20,18 +21,11 @@ function DrinksController($http){
     });
   }
 
-  // function destroyDrinks(drink){
-  //   $http
-  //     .delete("/drinks/" + drinks._id)
-  //     .then(function(response){
-  //       var index = self.all.indexOf(drink);
-  //       self.all.splice(index, 1);
-  //     });
-  // }
 }
 
-function DrinksNewController($http, $state){
+function DrinksNewController($http, $state, authService){
   var self = this;
+  self.authService = authService;
   self.addDrink = addDrink;
   self.newDrink = {};
   self.destroyDrinks = destroyDrinks;

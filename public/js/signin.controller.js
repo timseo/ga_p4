@@ -36,7 +36,7 @@
           // on success
           function(decodedToken) {
             $log.info('Logged in!', decodedToken);
-            $state.go('about');
+            $state.go('index');
           },
           // on error
           function(err) {
@@ -54,7 +54,7 @@
           // on success
           function(decodedToken) {
             $log.info('Logged in!', decodedToken);
-            $state.go('about');
+            $state.go('index');
           },
           // on error
           function(err) {
