@@ -5,8 +5,13 @@ html, body {
   margin: 0;
   padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: white;
   padding-bottom: 70px;
+}
+
+body {
+  background-image: url('http://wallpapercave.com/wp/lFqKTTj.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #circles {
@@ -20,7 +25,8 @@ html, body {
 }
 
 h1 {
-  margin-top: 50px;
+  margin-top: 100px;
+  text-decoration-color: white;
 }
 
 
