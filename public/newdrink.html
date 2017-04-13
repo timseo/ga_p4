@@ -3,16 +3,16 @@
 
   <!-- <div ng-show="self.authService.isLoggedIn()"> -->
 
-      <form ng-submit="drinknewCtrl.addDrink()" id="newDrink">
-        <div>
-          <label for="newDrink-name">Name:</label>
+      <form class="form-inline" ng-submit="drinknewCtrl.addDrink()" id="newDrink">
+        <div class="form-group">
+          <label for="newDrink-name">Name: </label>
           <input type="text" id="newDrink-name" ng-model="drinknewCtrl.newDrink.drinkName" placeholder="Boom boom juice">
         </div>
-        <div>
-          <label for="newDrink-image">Logo:</label>
+        <div class="form-group">
+          <label for="newDrink-image">Logo: </label>
           <input type="text" id="newDrink-image" ng-model="drinknewCtrl.newDrink.drinkImage">
         </div>
-        <div>
+        <div class="form-group">
           <input type="submit" value="Add Drink">
         </div>
       </form>

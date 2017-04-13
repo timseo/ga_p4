@@ -16,30 +16,45 @@
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
-<body ng-controller="DrinksController as drinkCtrl">
+<body>
   <header ng-controller="NavbarController as vm">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <a ui-sref="index" class="navbar-brand">
-              <img alt="Brand" src="https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true" height= 275%>
-          </a>
-          <!-- Single button -->
-              <button type="button" class="btn btn-default navbar-btn navbar-right">Clear</button>
-              <button type="button" class="btn btn-default dropdown-toggle navbar-btn navbar-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Action <span class="caret"></span>
-              </button>
-              <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
-              <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a ui-sref="index" class="navbar-brand">
+                  <img alt="Brand" src="https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true" height= 275%>
+              </a>
+            </div>
 
-              <a ui-sref="index">Brewsker Board</a>|
-              <a ui-sref="newdrink">New Drink</a>|
-              <a ui-sref="about">Choose Brewsker</a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1">
 
-    </nav>
+              <ul class="nav navbar-nav">
+                <li><a ui-sref="index">Brewsker Board</a></li>
+                <li><a ui-sref="about">Choose Brewsker</a></li>
+                <li><a ui-sref="newdrink">New Drink</a></li>
+              </ul>
+
+              <form class="navbar-form navbar-left">
+                <div class="form-group">
+                  <button type="button" class="button-clear btn btn-default navbar-btn navbar-right">Clear</button>
+                  <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
+                  <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
+                </div>
+              </form>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
   </header>
-
+            <!-- <div ng-show="vm.authService.isLoggedIn()"> -->
               <main ui-view></main>
+            <!-- </div> -->
+
+
+              {{drinkCtrl.drinkImage}}
 
               <section id="circles"></section>
               <footer><ul id="players"></ul></footer>

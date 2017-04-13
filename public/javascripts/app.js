@@ -19,15 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
       initials: initials,
       x: evt.clientX,
       y: evt.clientY,
-      dia: randomBetween(10,100),
+      dia: randomBetween(40,200),
       rgba: getRandomRGBA(),
       rgbatext: getRandomRGBA()
     })
     // addCircle(evt.clientX, evt.clientY, randomBetween(10,125), getRandomRGBA())
   })
 // clear button
-  document.getElementsByTagName('button')[0].addEventListener('click', function() {
+  document.getElementsByClassName('button-clear')[0].addEventListener('click', function() {
 
+    console.log('cleared it')
     socket.emit('clear-circle', {})
 
   })
@@ -42,11 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
     el.style.top = data.y - Math.floor(data.dia / 2 + 0.5) + 'px'
     el.style.width = el.style.height = data.dia + 'px'
     // el.style.backgroundColor = data.rgba
-    el.style.border = data.rgba + 'solid 3px'
+    el.style.border = data.rgba + 'solid 5px'
     el.style.fontSize = Math.floor(data.dia / 3) + 'px'
     el.style.color = data.rgbatext // or use data.rgba to pull in random
     el.style.textAlign = 'left'
     el.style.lineHeight = data.dia + 'px'
+    // el.innerHTML = '<img src="http://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
     el.innerHTML = '<img src="http://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
     circles.appendChild(el)
   }
