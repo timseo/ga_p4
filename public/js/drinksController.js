@@ -9,7 +9,7 @@ function DrinksController($http){
   var self = this;
   self.all = [];
   self.getDrinks = getDrinks;
-  self.destroyDrinks = destroyDrinks;
+  // self.destroyDrinks = destroyDrinks;
 
   getDrinks();
   function getDrinks(){
@@ -20,20 +20,21 @@ function DrinksController($http){
     });
   }
 
-  function destroyDrinks(drinks){
-    $http
-      .delete("/drinks/" + drink._id)
-      .then(function(response){
-        var index = self.all.indexOf(drink);
-        self.all.splice(index, 1);
-      });
-  }
+  // function destroyDrinks(drink){
+  //   $http
+  //     .delete("/drinks/" + drinks._id)
+  //     .then(function(response){
+  //       var index = self.all.indexOf(drink);
+  //       self.all.splice(index, 1);
+  //     });
+  // }
 }
 
 function DrinksNewController($http, $state){
   var self = this;
   self.addDrink = addDrink;
   self.newDrink = {};
+  self.destroyDrinks = destroyDrinks;
 
 // move to factory when refactoring
   function getDrinks(){
@@ -55,4 +56,14 @@ getDrinks()
     })
     self.newDrink = {}
   }
+
+  function destroyDrinks(drink){
+    $http
+      .delete("/drinks/" + drink._id)
+      .then(function(response){
+        var index = self.all.indexOf(drink);
+        self.all.splice(index, 1);
+      });
+  }
+
 }

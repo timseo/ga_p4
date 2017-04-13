@@ -49,9 +49,9 @@ li {
   list-style: none;
   display: inline;
   font: 12px Arial;
-  color: white;
+  color: black;
   border-radius: 4px;
-  background-color: gray;
+  background-color: white;
   padding: 4px;
   margin-right: 5px;
 }
