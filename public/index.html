@@ -28,12 +28,7 @@
                 <button type="button" class="btn btn-default dropdown-toggle navbar-btn navbar-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Action <span class="caret"></span>
                 </button>
-                  <ul class="dropdown-menu">
-                  <li><a ui-sref="#">Action</a></li>
-                  <li><a ui-sref="#">Another action</a></li>
-                  <li><a ui-sref="#">Something else here</a></li>
-                  <li><a ui-sref="#">Separated link</a></li>
-                  </ul>
+
 
               <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
               <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>

@@ -35,6 +35,17 @@ function DrinksNewController($http, $state){
   self.addDrink = addDrink;
   self.newDrink = {};
 
+// move to factory when refactoring
+  function getDrinks(){
+    $http
+      .get('/drinks')
+      .then(function(response){
+        self.all = response.data;
+    });
+  }
+
+getDrinks()
+
   function addDrink(){
     $http
       .post('/drinks', self.newDrink)

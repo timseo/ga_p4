@@ -26,7 +26,7 @@
   <hr>
 
   <ul id="drinks">
-    <li ng-repeat="drink in drinkCtrl.all" data-id="{{drinks._id}}">
+    <li ng-repeat="drink in drinknewCtrl.all" data-id="{{drinks._id}}">
       <strong>{{drink.drinkName}}</strong> | {{drink.drinkImage}}
       <button ng-click="drinkCtrl.destroyDrinks(drink)">DELETE</button>
     </li>
