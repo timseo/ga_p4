@@ -16,7 +16,7 @@ function DrinksController($http){
     $http
       .get('/drinks')
       .then(function(response){
-        self.all = response.data.drinks;
+        self.all = response.data;
     });
   }
 
@@ -32,7 +32,7 @@ function DrinksController($http){
 
 function DrinksNewController($http, $state){
   var self = this;
-  self.addDrink;
+  self.addDrink = addDrink;
   self.newDrink = {};
 
   function addDrink(){

@@ -11,13 +11,13 @@ function DrinkRouter($stateProvider, $urlRouterProvider){
     url: '/',
     templateUrl: 'index.html',
     controller: 'DrinksController',
-    controllerAs: 'listVm'
+    controllerAs: 'drinkCtrl'
   })
   .state('newdrink', {
     url: '/new',
     templateUrl: 'newdrink.html',
     controller: 'DrinksNewController',
-    controllerAs: 'newVm'
+    controllerAs: 'drinknewCtrl'
   })
   .state('about', {
     url: '/about',
