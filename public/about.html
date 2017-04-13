@@ -1,2 +1,15 @@
 <h1>About Brewskersss</h1>
 <h1>Choose your Brewsker:</h1>
+
+<hr>
+
+  <ul>
+    <li ng-repeat="drink in drinkCtrl.all" data-id="{{drinks._id}}">
+        <img ng-src="{{drink.drinkImage}}" alt="logo" height="120px">
+      <br>
+      <br>
+
+      <hr>
+    </li>
+
+  </ul>

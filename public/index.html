@@ -21,32 +21,26 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <a ui-sref="index" class="navbar-brand">
-              <img alt="Brand" src="https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true" height= 160%>
+              <img alt="Brand" src="https://github.com/timseo/ga_p4/blob/master/wireframe_erd/brewskerlogo.png?raw=true" height= 275%>
           </a>
+
           <!-- Single button -->
-                <button type="button" class="btn btn-default navbar-btn navbar-right">Clear</button>
-                <button type="button" class="btn btn-default dropdown-toggle navbar-btn navbar-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Action <span class="caret"></span>
-                </button>
-
-
+              <button type="button" class="btn btn-default navbar-btn navbar-right">Clear</button>
+              <button type="button" class="btn btn-default dropdown-toggle navbar-btn navbar-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action <span class="caret"></span>
+              </button>
               <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
               <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Sign out</button>
-          <a ui-sref="index">All Drinks</a>
-          <a ui-sref="newdrink">New Drink</a>
-          <a ui-sref="about">About</a>
+              
+              <a ui-sref="index">Brewsker Board</a>|
+              <a ui-sref="newdrink">New Drink</a>|
+              <a ui-sref="about">Choose Brewsker</a>
       </div>
     </nav>
 
   </header>
 
-
-
-          <h1>Brewsker in index page</h1>
-
               <main ui-view></main>
-
-
 
               <section id="circles"></section>
               <footer><ul id="players"></ul></footer>

@@ -13,24 +13,18 @@
   </div>
 </form>
 
-<!-- Single button -->
-
-  <!-- <ul class="dropdown-menu">
-    <li><a ui-sref-active="active" ui-sref="#">Action</a></li>
-    <li><a ui-sref-active="active" ui-sref="#">Another action</a></li>
-    <li><a ui-sref-active="active" ui-sref="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a ui-sref="#">Separated link</a></li>
-  </ul> -->
-
   <hr>
 
     <ul>
       <li ng-repeat="drink in drinknewCtrl.all" data-id="{{drinks._id}}">
-        <img ng-src="{{drink.drinkImage}}" alt="logo">
+          <img ng-src="{{drink.drinkImage}}" alt="logo" height="120px">
         <br>
-        <strong>{{drink.drinkName}}</strong>
         <br>
-        <button ng-click="drinknewCtrl.destroyDrinks(drink)">DELETE</button>
+          <strong>{{drink.drinkName}}</strong>
+        <br>
+        <br>
+          <button ng-click="drinknewCtrl.destroyDrinks(drink)" margin-top="20px">DELETE</button>
+        <hr>
       </li>
+
     </ul>
