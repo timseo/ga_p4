@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
-<body>
+<body ng-controller="DrinksNewController as drinknewCtrl">
   <header ng-controller="NavbarController as vm">
 
         <nav>
@@ -50,11 +50,14 @@
         </nav>
 
   </header>
+
+
             <!-- <div ng-show="vm.authService.isLoggedIn()"> -->
               <main ui-view></main>
             <!-- </div> -->
 
               <section id="circles"></section>
+
               <footer><ul id="players"></ul></footer>
 
       </div>

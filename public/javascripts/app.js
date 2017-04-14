@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   })
 
-  // while (initials.length < 2 || initials.length > 8) {
-  //   initials = prompt("Please enter your initials").toUpperCase()
-  // }
+  while (initials.length < 1) {
+    initials = prompt("Please enter image url")
+  }
 // changed addcircle parametter x y rgba etc to 'data'
   function addCircle(data) {
     var el = document.createElement('div')
@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
     el.style.textAlign = 'left'
     el.style.lineHeight = data.dia + 'px'
     // el.innerHTML = '<img src="http://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
-    el.innerHTML = '<img src="https://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
+    el.innerHTML = '<img src="' + data.initials + '" class="img-responsive img-circle" height="120px" alt="logo">'
+    // el.innerHTML = '<ul><li ng-repeat="drink in drinknewCtrl.all" data-id="{{drinks._id}}"><img ng-src="{{drink.drinkImage}}" alt="logo" height="120px"></li></ul>'
     circles.appendChild(el)
   }
 
