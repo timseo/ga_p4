@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     el.style.textAlign = 'left'
     el.style.lineHeight = data.dia + 'px'
     // el.innerHTML = '<img src="http://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
-    el.innerHTML = '<img src="http://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
+    el.innerHTML = '<img src="https://beerpulse.com/wp-content/uploads/2012/12/coedo-brewery-logo.jpg" class="img-responsive img-circle" alt="logo">'
     circles.appendChild(el)
   }
 

@@ -52,6 +52,11 @@ header button {
   border-radius: 4px;
 }
 
+button {
+  margin: 10px;
+  display: inline-block;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -71,5 +76,10 @@ li {
 }
 
 label {
+  color: white;
+}
+
+p {
+  font-size: 40px;
   color: white;
 }
